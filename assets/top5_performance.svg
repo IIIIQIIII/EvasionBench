@@ -2,68 +2,55 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="692" height="328" viewBox="0 0 692 328">
     <rect width="692" height="328" fill="white"/>
 
-    <!-- 水平网格线 -->
-    <line x1="80" y1="280" x2="520" y2="280" stroke="#e0e0e0" stroke-width="1"/>
-    <line x1="80" y1="232" x2="520" y2="232" stroke="#e0e0e0" stroke-width="1"/>
-    <line x1="80" y1="184" x2="520" y2="184" stroke="#e0e0e0" stroke-width="1"/>
-    <line x1="80" y1="136" x2="520" y2="136" stroke="#e0e0e0" stroke-width="1"/>
-    <line x1="80" y1="88" x2="520" y2="88" stroke="#e0e0e0" stroke-width="1"/>
-    <line x1="80" y1="40" x2="520" y2="40" stroke="#e0e0e0" stroke-width="1"/>
+    <!-- 垂直网格线 -->
+    <line x1="150" y1="40" x2="150" y2="260" stroke="#e0e0e0" stroke-width="1"/>
+    <line x1="245" y1="40" x2="245" y2="260" stroke="#e0e0e0" stroke-width="1"/>
+    <line x1="340" y1="40" x2="340" y2="260" stroke="#e0e0e0" stroke-width="1"/>
+    <line x1="435" y1="40" x2="435" y2="260" stroke="#e0e0e0" stroke-width="1"/>
+    <line x1="530" y1="40" x2="530" y2="260" stroke="#e0e0e0" stroke-width="1"/>
 
-    <!-- Y轴标签 -->
-    <text x="70" y="284" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">0</text>
-    <text x="70" y="236" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">20</text>
-    <text x="70" y="188" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">40</text>
-    <text x="70" y="140" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">60</text>
-    <text x="70" y="92" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">80</text>
-    <text x="70" y="44" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">100</text>
+    <!-- X轴标签 (0-100) -->
+    <text x="150" y="280" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#666">0</text>
+    <text x="245" y="280" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#666">25</text>
+    <text x="340" y="280" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#666">50</text>
+    <text x="435" y="280" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#666">75</text>
+    <text x="530" y="280" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#666">100</text>
 
-    <!-- Y轴标题 -->
-    <text x="25" y="160" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="15" font-weight="bold" fill="#333" transform="rotate(-90, 25, 160)">Macro-F1 (%)</text>
+    <!-- X轴标题 -->
+    <text x="340" y="310" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">Macro-F1 (%)</text>
 
-    <!-- 柱子 (柱宽55px, 间距25px) -->
-    <!-- Eva-4B (Full): 84.9% - 突出显示 -->
-    <rect x="100" y="76.16" width="55" height="203.84" fill="#cdb4db"/>
-    <text x="127.5" y="68" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="14" font-weight="bold" fill="#333">84.9%</text>
+    <!-- 横向柱子 (每1%=3.8px, 起点x=150) -->
+    <!-- Eva-4B (Full): 84.9% - 粉色突出 -->
+    <rect x="150" y="50" width="322.62" height="32" fill="#ffc8dd"/>
+    <text x="478" y="72" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">84.9%</text>
 
-    <!-- Gemini 3 Flash: 84.64% -->
-    <rect x="180" y="76.78" width="55" height="203.22" fill="#bde0fe"/>
-    <text x="207.5" y="68" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">84.6%</text>
+    <!-- Gemini 3 Flash: 84.64% - 最深蓝 -->
+    <rect x="150" y="92" width="321.63" height="32" fill="#a8d4f0"/>
+    <text x="477" y="114" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">84.6%</text>
 
     <!-- Claude Opus 4.5: 84.38% -->
-    <rect x="260" y="77.41" width="55" height="202.59" fill="#bde0fe"/>
-    <text x="287.5" y="68" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">84.4%</text>
+    <rect x="150" y="134" width="320.64" height="32" fill="#b5dcf4"/>
+    <text x="476" y="156" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">84.4%</text>
 
     <!-- GLM-4.7: 82.91% -->
-    <rect x="340" y="80.94" width="55" height="199.06" fill="#bde0fe"/>
-    <text x="367.5" y="72" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">82.9%</text>
+    <rect x="150" y="176" width="315.06" height="32" fill="#c2e4f7"/>
+    <text x="471" y="198" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">82.9%</text>
 
-    <!-- Eva-4B (Consensus): 81.37% -->
-    <rect x="420" y="84.64" width="55" height="195.36" fill="#ffc8dd"/>
-    <text x="447.5" y="76" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">81.4%</text>
+    <!-- GPT-5.2: 80.90% - 最浅蓝 -->
+    <rect x="150" y="218" width="307.42" height="32" fill="#cfecfa"/>
+    <text x="463" y="240" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">80.9%</text>
 
-    <!-- X轴标签 -->
-    <text x="127.5" y="300" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333">Eva-4B</text>
-    <text x="127.5" y="315" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">(Full)</text>
-
-    <text x="207.5" y="300" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#666">Gemini 3</text>
-    <text x="207.5" y="315" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">Flash</text>
-
-    <text x="287.5" y="300" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#666">Claude</text>
-    <text x="287.5" y="315" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">Opus 4.5</text>
-
-    <text x="367.5" y="300" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#666">GLM-4.7</text>
-
-    <text x="447.5" y="300" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#666">Eva-4B</text>
-    <text x="447.5" y="315" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">(Consensus)</text>
+    <!-- Y轴标签 (模型名称) -->
+    <text x="140" y="72" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#333">Eva-4B (Full)</text>
+    <text x="140" y="114" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">Gemini 3 Flash</text>
+    <text x="140" y="156" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">Claude Opus 4.5</text>
+    <text x="140" y="198" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">GLM-4.7</text>
+    <text x="140" y="240" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#666">GPT-5.2</text>
 
     <!-- 右侧图例 -->
-    <rect x="550" y="100" width="16" height="16" fill="#cdb4db"/>
-    <text x="572" y="113" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#333">Eva-4B (Full)</text>
+    <rect x="580" y="100" width="14" height="14" fill="#ffc8dd"/>
+    <text x="600" y="112" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#333">Eva-4B</text>
 
-    <rect x="550" y="130" width="16" height="16" fill="#ffc8dd"/>
-    <text x="572" y="143" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#333">Eva-4B (Consensus)</text>
-
-    <rect x="550" y="160" width="16" height="16" fill="#bde0fe"/>
-    <text x="572" y="173" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" fill="#333">Frontier LLMs</text>
+    <rect x="580" y="125" width="14" height="14" fill="#b5dcf4"/>
+    <text x="600" y="137" font-family="Helvetica Neue, Arial, sans-serif" font-size="12" fill="#333">Frontier LLMs</text>
 </svg>

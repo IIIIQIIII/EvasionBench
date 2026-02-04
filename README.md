@@ -8,63 +8,60 @@ EvasionBench introduces a three-level evasion taxonomy (**direct**, **intermedia
 
 **Eva-4B**, a fine-tuned Qwen3-4B model, achieves **84.9% Macro-F1**, outperforming larger frontier models including Claude Opus 4.5 and GPT-5.2.
 
+## Multi-Model Consensus (MMC) Framework
+
+Our MMC framework leverages multiple frontier LLMs for annotation, with a three-judge majority voting mechanism to resolve disagreements.
+
+<p align="center">
+  <img src="assets/mmc_pipe.svg" alt="MMC Pipeline" width="100%">
+</p>
+
+## Model Performance
+
+Top 5 models on EvasionBench 1K evaluation set. **Eva-4B (Full)** achieves the highest Macro-F1, outperforming frontier LLMs.
+
+<p align="center">
+  <img src="assets/top5_performance.svg" alt="Top 5 Performance" width="1200">
+</p>
+
+## Leaderboard
+
+Full evaluation results on EvasionBench 1K gold-standard test set.
+
+| Rank | Model | Category | Accuracy | Macro-F1 |
+|------|-------|----------|----------|----------|
+| 1 | **Eva-4B (Full)** | Eva-4B | 84.8% | **84.9%** |
+| 2 | Gemini 3 Flash | Closed-Source | 84.6% | 84.64% |
+| 3 | Claude Opus 4.5 | Closed-Source | 84.1% | 84.38% |
+| 4 | GLM-4.7 | Open-Source | 83.1% | 82.91% |
+| 5 | Eva-4B (Consensus) | Eva-4B | 81.0% | 81.37% |
+| 6 | GPT-5.2 | Closed-Source | 80.8% | 80.90% |
+| 7 | Eva-4B (Opus Only) | Eva-4B | 80.6% | 80.61% |
+| 8 | Qwen3-Coder | Open-Source | 78.0% | 78.16% |
+| 9 | MiniMax-M2.1 | Open-Source | 71.8% | 71.31% |
+| 10 | DeepSeek-V3.2 | Open-Source | 66.7% | 66.88% |
+| 11 | Kimi-K2 | Open-Source | 67.8% | 66.68% |
+| 12 | Qwen3-4B (Base) | Base Model | 42.3% | 34.30% |
+
+## Evasion Taxonomy
+
+| Label | Definition | Example |
+|-------|------------|---------|
+| **Direct** | The core question is directly and explicitly answered | "We expect Q4 margin to be 32%." |
+| **Intermediate** | The response provides related context but sidesteps the specific core | "We expect margins to improve relative to Q3." |
+| **Fully Evasive** | The question is ignored, refused, or the response is entirely off-topic | "We are focused on driving long-term shareholder value." |
+
 ## Project Structure
 
 ```
 EvasionBench/
-├── index.html                 # Project page
-├── README.md                  # This file
-├── assets/                    # Static assets for project page
-│   ├── favicon.svg            # Site favicon (pink background + "E")
-│   ├── mmc_pipe.svg           # MMC pipeline diagram
-│   ├── top5_performance.svg   # Top 5 model performance chart
-│   ├── training_pipeline_pastel.svg
-│   ├── eva_4b_ablation_study_pastel.svg
-│   ├── training_loss_curve_pastel.png
-│   ├── eva_4b_confusion_matrix_pastel.png
-│   ├── judge_label_distribution_pastel.png
-│   └── position_bias_analysis_pastel.png
-├── data/                      # EvasionBench data samples
-│   └── evasionbench_test_cases_6samples.csv
-└── prompts/                   # Prompt templates
-    ├── evasion_rasiah_fine_tuning_minimalist.txt
-    └── evasion_rasiah_with_reason_prompt_template.txt
+├── index.html          # Project page
+├── README.md           # This file
+├── LICENSE             # Apache 2.0
+├── assets/             # Charts and figures
+├── data/               # EvasionBench data samples
+└── prompts/            # Prompt templates
 ```
-
-### `/data`
-
-Contains EvasionBench data samples for evaluation and demonstration.
-
-| File | Description |
-|------|-------------|
-| `evasionbench_test_cases_6samples.csv` | Sample Q&A pairs with gold labels |
-
-### `/prompts`
-
-Contains prompt templates used for evasion classification.
-
-| File | Description |
-|------|-------------|
-| `evasion_rasiah_fine_tuning_minimalist.txt` | Minimalist prompt for fine-tuning |
-| `evasion_rasiah_with_reason_prompt_template.txt` | Full prompt with reasoning |
-
-## Evasion Taxonomy
-
-| Label | Definition |
-|-------|------------|
-| **Direct** | The core question is directly and explicitly answered |
-| **Intermediate** | The response provides related context but sidesteps the specific core |
-| **Fully Evasive** | The question is ignored, refused, or the response is entirely off-topic |
-
-## Model Performance
-
-| Rank | Model | Macro-F1 |
-|------|-------|----------|
-| 1 | **Eva-4B (Full)** | **84.9%** |
-| 2 | Gemini 3 Flash | 84.6% |
-| 3 | Claude Opus 4.5 | 84.4% |
-| 4 | GLM-4.7 | 82.9% |
-| 5 | Eva-4B (Consensus) | 81.4% |
 
 ## Links
 
