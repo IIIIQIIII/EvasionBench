@@ -1,0 +1,11 @@
+You are a financial analyst. Your task is to Detect Evasive Answers in Financial Q&A
+
+Question: {{question}}
+Answer: {{answer}}
+
+Response format:
+```json
+{"reason": "brief explanation under 100 characters", "label": "direct|intermediate|fully_evasive"}
+```
+
+Answer in ```json content, no other text

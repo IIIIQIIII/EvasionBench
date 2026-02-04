@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="450" height="220" viewBox="0 0 450 220">
+    <!-- 水平网格线 -->
+    <line x1="50" y1="200" x2="280" y2="200" stroke="#e0e0e0" stroke-width="1"/>
+    <line x1="50" y1="164" x2="280" y2="164" stroke="#e0e0e0" stroke-width="1"/>
+    <line x1="50" y1="128" x2="280" y2="128" stroke="#e0e0e0" stroke-width="1"/>
+    <line x1="50" y1="92" x2="280" y2="92" stroke="#e0e0e0" stroke-width="1"/>
+    <line x1="50" y1="56" x2="280" y2="56" stroke="#e0e0e0" stroke-width="1"/>
+    <line x1="50" y1="20" x2="280" y2="20" stroke="#e0e0e0" stroke-width="1"/>
+
+    <!-- Y轴标签 -->
+    <text x="45" y="204" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">0</text>
+    <text x="45" y="168" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">20</text>
+    <text x="45" y="132" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">40</text>
+    <text x="45" y="96" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">60</text>
+    <text x="45" y="60" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">80</text>
+    <text x="45" y="24" text-anchor="end" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#666">100</text>
+
+    <!-- Y轴标题 -->
+    <text x="15" y="110" text-anchor="middle" font-family="Helvetica Neue, Arial, sans-serif" font-size="13" font-weight="bold" fill="#333" transform="rotate(-90, 15, 110)">Macro-F1 (%)</text>
+
+    <!-- 柱子 (柱宽20px, 间距12px) -->
+    <!-- Qwen3-4B (Base): 34.3% -->
+    <rect x="100" y="138.26" width="20" height="61.74" fill="#bde0fe"/>
+    <!-- Eva-4B (Consensus): 81.37% -->
+    <rect x="132" y="53.53" width="20" height="146.47" fill="#ffc8dd"/>
+    <!-- Eva-4B (Opus Only): 80.61% -->
+    <rect x="164" y="54.90" width="20" height="145.10" fill="#ffafcc"/>
+    <!-- Eva-4B (Full): 84.9% -->
+    <rect x="196" y="47.18" width="20" height="152.82" fill="#cdb4db"/>
+
+    <!-- 右侧图例 -->
+    <rect x="300" y="50" width="12" height="12" fill="#bde0fe"/>
+    <text x="318" y="60" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#333">Qwen3-4B (Base)</text>
+
+    <rect x="300" y="75" width="12" height="12" fill="#ffc8dd"/>
+    <text x="318" y="85" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#333">Eva-4B (Consensus)</text>
+
+    <rect x="300" y="100" width="12" height="12" fill="#ffafcc"/>
+    <text x="318" y="110" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#333">Eva-4B (Opus Only)</text>
+
+    <rect x="300" y="125" width="12" height="12" fill="#cdb4db"/>
+    <text x="318" y="135" font-family="Helvetica Neue, Arial, sans-serif" font-size="11" fill="#333">Eva-4B (Full)</text>
+</svg>
