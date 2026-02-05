@@ -5,7 +5,7 @@
   <a href="https://huggingface.co/FutureMa/Eva-4B-V2"><img src="https://img.shields.io/badge/🤗-Model-yellow?style=for-the-badge" alt="Model"></a>
   <a href="https://huggingface.co/datasets/FutureMa/EvasionBench"><img src="https://img.shields.io/badge/🤗-Dataset-orange?style=for-the-badge" alt="Dataset"></a>
   <a href="https://colab.research.google.com/github/IIIIQIIII/EvasionBench/blob/main/scripts/eva4b_inference.ipynb"><img src="https://img.shields.io/badge/Colab-Quick_Start-F9AB00?style=for-the-badge&logo=googlecolab" alt="Open In Colab"></a>
-  <a href="https://arxiv.org/abs/2602.xxxxx"><img src="https://img.shields.io/badge/arXiv-Paper-red?style=for-the-badge" alt="Paper"></a>
+  <a href="https://arxiv.org/abs/2601.09142"><img src="https://img.shields.io/badge/arXiv-Paper-red?style=for-the-badge" alt="Paper"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-Apache_2.0-green?style=for-the-badge" alt="License"></a>
 </p>
 
@@ -82,16 +82,19 @@ EvasionBench/
 - [Project Page](https://iiiiqiiii.github.io/EvasionBench)
 - [Model on HuggingFace](https://huggingface.co/FutureMa/Eva-4B-V2)
 - [Dataset on HuggingFace](https://huggingface.co/datasets/FutureMa/EvasionBench)
-- [Paper (arXiv)](https://arxiv.org/abs/2602.xxxxx)
+- [Paper (arXiv)](https://arxiv.org/abs/2601.09142)
 
 ## Citation
 
 ```bibtex
-@article{evasionbench2026,
+@misc{ma2026evasionbenchlargescalebenchmarkdetecting,
   title={EvasionBench: A Large-Scale Benchmark for Detecting Managerial Evasion in Earnings Call Q&A},
-  author={...},
-  journal={arXiv preprint arXiv:2602.xxxxx},
-  year={2026}
+  author={Shijian Ma and Yan Lin and Yi Yang},
+  year={2026},
+  eprint={2601.09142},
+  archivePrefix={arXiv},
+  primaryClass={cs.LG},
+  url={https://arxiv.org/abs/2601.09142}
 }
 ```
 

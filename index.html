@@ -300,6 +300,11 @@
         }
 
         /* BibTeX */
+        .bibtex-container {
+            position: relative;
+            margin-top: 20px;
+        }
+
         .bibtex {
             background: #1a202c;
             color: #e2e8f0;
@@ -309,7 +314,33 @@
             font-size: 0.85rem;
             overflow-x: auto;
             text-align: left;
-            margin-top: 20px;
+            line-height: 1.6;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            background: var(--pastel-lavender);
+            color: var(--text-dark);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .copy-btn:hover {
+            background: var(--pastel-pink);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .copy-btn.copied {
+            background: var(--pastel-mint);
         }
 
         /* Responsive */
@@ -334,7 +365,7 @@
         <p class="subtitle">A Large-Scale Benchmark for Detecting Managerial Evasion in Earnings Call Q&A</p>
 
         <div class="badges">
-            <a href="#" class="badge badge-paper">📄 Paper (arXiv)</a>
+            <a href="https://arxiv.org/abs/2601.09142" class="badge badge-paper">📄 Paper (arXiv)</a>
             <a href="https://github.com/IIIIQIIII/EvasionBench" class="badge badge-github">💻 GitHub</a>
             <a href="https://huggingface.co/FutureMa/Eva-4B-V2" class="badge badge-huggingface">🤗 Model</a>
             <a href="https://huggingface.co/datasets/FutureMa/EvasionBench" class="badge badge-data">📊 Dataset</a>
@@ -598,16 +629,39 @@
         <div class="container">
             <h2 class="section-title">Citation</h2>
             <p style="color: var(--text-gray); margin-bottom: 16px;">If you find EvasionBench useful, please cite our paper:</p>
-            <div class="bibtex">
-@article{evasionbench2026,
-  title={EvasionBench: A Large-Scale Benchmark for Detecting Managerial Evasion in Earnings Call Q&A},
-  author={...},
-  journal={arXiv preprint arXiv:2602.xxxxx},
-  year={2026}
-}
+            <div class="bibtex-container">
+                <button class="copy-btn" onclick="copyBibtex()">Copy</button>
+                <pre class="bibtex" id="bibtex-code">@misc{ma2026evasionbench,
+  title     = {EvasionBench: A Large-Scale Benchmark for Detecting Managerial Evasion in Earnings Call Q&A},
+  author    = {Shijian Ma and Yan Lin and Yi Yang},
+  year      = {2026},
+  eprint    = {2601.09142},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url       = {https://arxiv.org/abs/2601.09142}
+}</pre>
             </div>
         </div>
     </section>
+
+    <script>
+        function copyBibtex() {
+            const bibtexCode = document.getElementById('bibtex-code').textContent;
+            const copyBtn = document.querySelector('.copy-btn');
+
+            navigator.clipboard.writeText(bibtexCode).then(() => {
+                copyBtn.textContent = 'Copied!';
+                copyBtn.classList.add('copied');
+
+                setTimeout(() => {
+                    copyBtn.textContent = 'Copy';
+                    copyBtn.classList.remove('copied');
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy:', err);
+            });
+        }
+    </script>
 
     <!-- Footer -->
     <footer class="footer">
